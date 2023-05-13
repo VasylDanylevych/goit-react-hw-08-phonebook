@@ -1,14 +1,15 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { List } from './ContactList.style';
-// import PropTypes from 'prop-types';
-import { deleteContactThunk, fetchContactsThunk } from 'redux/thunk';
 import { useEffect } from 'react';
+import { selectFilter } from 'redux/filter/selector';
+import { selectContacts, selectIsLoading } from 'redux/contacts/selector';
+import { deleteContactThunk, fetchContactsThunk } from 'redux/contacts/thunk';
 
 export const ContactList = () => {
   const dispatch = useDispatch();
-  const { items, isLoading } = useSelector(state => state.contacts);
-  console.log('items: ', items);
-  const filter = useSelector(state => state.filter);
+  const items = useSelector(selectContacts);
+  const isLoading = useSelector(selectIsLoading);
+  const filter = useSelector(selectFilter);
 
   useEffect(() => {
     dispatch(fetchContactsThunk());
@@ -45,14 +46,3 @@ export const ContactList = () => {
     </>
   );
 };
-
-// ContactList.propTypes = {
-//   contacts: PropTypes.arrayOf(
-//     PropTypes.exact({
-//       id: PropTypes.string,
-//       name: PropTypes.string,
-//       number: PropTypes.string,
-//     })
-//   ),
-//   deleteContact: PropTypes.func,
-// };

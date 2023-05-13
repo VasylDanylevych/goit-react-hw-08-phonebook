@@ -1,14 +1,16 @@
 import { useState } from 'react';
-import { Form, Input } from './ContactForm.style';
+// import { Form, Input } from './ContactForm.style';
 import { useDispatch, useSelector } from 'react-redux';
-import { addContactThunk } from 'redux/thunk';
+import { addContactThunk } from 'redux/contacts/thunk';
+import { selectContacts } from 'redux/contacts/selector';
+import { Box, FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
   const [number, setNumber] = useState('');
 
   const dispatch = useDispatch();
-  const contacts = useSelector(state => state.contacts.items);
+  const contacts = useSelector(selectContacts);
 
   const handleSubmit = evt => {
     evt.preventDefault();
@@ -25,9 +27,11 @@ export default function ContactForm() {
   };
 
   return (
-    <Form onSubmit={handleSubmit}>
-      <label>
-        Name:
+    <Box display="flex" flexDirection="column" gap={4}>
+      <FormControl onSubmit={handleSubmit}>
+        <FormLabel fontSize="20px" fontWeight="600">
+          Name:
+        </FormLabel>
         <Input
           type="text"
           name="name"
@@ -37,9 +41,11 @@ export default function ContactForm() {
           value={name}
           onChange={e => setName(e.target.value)}
         />
-      </label>
-      <label>
-        Number:
+      </FormControl>
+      <FormControl>
+        <FormLabel fontSize="20px" fontWeight="600">
+          Number:
+        </FormLabel>
         <Input
           type="tel"
           name="number"
@@ -49,8 +55,10 @@ export default function ContactForm() {
           value={number}
           onChange={e => setNumber(e.target.value)}
         />
-      </label>
-      <button type="submit">Add contact</button>
-    </Form>
+      </FormControl>
+      <Button type="submit" colorScheme="blue" size="lg">
+        Add contact
+      </Button>
+    </Box>
   );
 }

@@ -1,8 +1,8 @@
 import { createSlice, isAnyOf } from '@reduxjs/toolkit';
 import {
-  fetchContactsThunk,
   addContactThunk,
   deleteContactThunk,
+  fetchContactsThunk,
 } from './thunk';
 
 const defaultStatus = {
@@ -42,7 +42,7 @@ const handleRejected = (state, { payload }) => {
   state.error = payload;
 };
 
-export const contactsCounterSlice = createSlice({
+const contactsCounterSlice = createSlice({
   name: 'contacts',
   initialState: {
     items: [],
@@ -61,3 +61,5 @@ export const contactsCounterSlice = createSlice({
       .addMatcher(isAnyOf(...fn(defaultStatus.rejected)), handleRejected);
   },
 });
+
+export const contactsReducer = contactsCounterSlice.reducer;

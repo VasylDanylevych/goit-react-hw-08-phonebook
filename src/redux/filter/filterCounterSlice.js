@@ -11,3 +11,5 @@ export const filterCounterSlice = createSlice({
 });
 
 export const { filterContact } = filterCounterSlice.actions;
+
+export const filterReducer = filterCounterSlice.reducer;

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
 
 export const Input = styled.input`
-    height: 35px;
-    padding-left: 20px;
-    margin-left: 5px;
-    border-radius: 4px;
-    font-size: 15px;
+  height: 35px;
+  padding-left: 20px;
+  margin-left: 5px;
+  border-radius: 4px;
+  font-size: 15px;
+  border: 1px solid;
 `;
 
 export const Label = styled.label`
-    font-size: 20px;
-    font-weight: 600;
-`
+  font-size: 20px;
+  font-weight: 600;
+`;
