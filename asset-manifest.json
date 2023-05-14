@@ -1,22 +1,22 @@
 {
   "files": {
     "main.css": "/goit-react-hw-08-phonebook/static/css/main.e2a459a4.css",
-    "main.js": "/goit-react-hw-08-phonebook/static/js/main.2c7df1cd.js",
-    "static/js/69.a0791446.chunk.js": "/goit-react-hw-08-phonebook/static/js/69.a0791446.chunk.js",
-    "static/js/198.e4e74fca.chunk.js": "/goit-react-hw-08-phonebook/static/js/198.e4e74fca.chunk.js",
+    "main.js": "/goit-react-hw-08-phonebook/static/js/main.a9ac475c.js",
+    "static/js/69.c46a562b.chunk.js": "/goit-react-hw-08-phonebook/static/js/69.c46a562b.chunk.js",
+    "static/js/198.2e32e3d3.chunk.js": "/goit-react-hw-08-phonebook/static/js/198.2e32e3d3.chunk.js",
     "static/js/303.25298657.chunk.js": "/goit-react-hw-08-phonebook/static/js/303.25298657.chunk.js",
     "static/js/313.f6786fe1.chunk.js": "/goit-react-hw-08-phonebook/static/js/313.f6786fe1.chunk.js",
     "static/media/watermelon.png": "/goit-react-hw-08-phonebook/static/media/watermelon.cc5bd06a3306c8fc0002.png",
     "index.html": "/goit-react-hw-08-phonebook/index.html",
     "main.e2a459a4.css.map": "/goit-react-hw-08-phonebook/static/css/main.e2a459a4.css.map",
-    "main.2c7df1cd.js.map": "/goit-react-hw-08-phonebook/static/js/main.2c7df1cd.js.map",
-    "69.a0791446.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/69.a0791446.chunk.js.map",
-    "198.e4e74fca.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/198.e4e74fca.chunk.js.map",
+    "main.a9ac475c.js.map": "/goit-react-hw-08-phonebook/static/js/main.a9ac475c.js.map",
+    "69.c46a562b.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/69.c46a562b.chunk.js.map",
+    "198.2e32e3d3.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/198.2e32e3d3.chunk.js.map",
     "303.25298657.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/303.25298657.chunk.js.map",
     "313.f6786fe1.chunk.js.map": "/goit-react-hw-08-phonebook/static/js/313.f6786fe1.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e2a459a4.css",
-    "static/js/main.2c7df1cd.js"
+    "static/js/main.a9ac475c.js"
   ]
 }
