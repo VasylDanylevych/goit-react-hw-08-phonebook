@@ -33,7 +33,7 @@ const HomePage = () => {
           <Heading as="h1" size="xl" marginY="2rem">
             Phone book
           </Heading>
-          <Text w={550} margin="0 auto" fontSize="xl" marginY="2rem">
+          <Text maxWidth={550} margin="0 auto" fontSize="xl" marginY="2rem">
             This application will allow you to create your own phone book so you
             don't lose contact.
           </Text>
