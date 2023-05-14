@@ -1,9 +1,9 @@
 import { useState } from 'react';
-// import { Form, Input } from './ContactForm.style';
+import { Form } from './ContactForm.style';
 import { useDispatch, useSelector } from 'react-redux';
 import { addContactThunk } from 'redux/contacts/thunk';
 import { selectContacts } from 'redux/contacts/selector';
-import { Box, FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
+import { FormControl, FormLabel, Input, Button } from '@chakra-ui/react';
 
 export default function ContactForm() {
   const [name, setName] = useState('');
@@ -27,8 +27,8 @@ export default function ContactForm() {
   };
 
   return (
-    <Box display="flex" flexDirection="column" gap={4}>
-      <FormControl onSubmit={handleSubmit}>
+    <Form onSubmit={handleSubmit}>
+      <FormControl>
         <FormLabel fontSize="20px" fontWeight="600">
           Name:
         </FormLabel>
@@ -59,6 +59,6 @@ export default function ContactForm() {
       <Button type="submit" colorScheme="blue" size="lg">
         Add contact
       </Button>
-    </Box>
+    </Form>
   );
 }

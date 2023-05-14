@@ -1,28 +1,31 @@
 import React from 'react';
-import { Box, Heading, Button, Text } from '@chakra-ui/react';
+import { Box, Heading, Button, Text, Image } from '@chakra-ui/react';
 import { Link } from 'react-router-dom';
-import { selectToken } from 'redux/auth/selectors';
+import { selectToken, selectUserName } from 'redux/auth/selectors';
 import { useSelector } from 'react-redux';
-
+import image from '../../image/watermelon.png';
 const HomePage = () => {
   const token = useSelector(selectToken);
+  const name = useSelector(selectUserName);
 
   return (
-    <Box textAlign="center" py={8}>
+    <Box textAlign="center">
       {token ? (
         <>
-          <img src="/path/to/your/image.jpg" alt="Книга контактів" />
-
+          <Image margin="0 auto" w={300} src={image} alt="Книга контактів" />
           <Heading as="h1" size="xl" my={4}>
             Phone book
           </Heading>
+          <Text fontSize="lg" my={4}>
+            Welcome {name}
+          </Text>
 
           <Text fontSize="lg" my={4}>
             Create your own contact book now!
           </Text>
 
           <Button as={Link} to="/contacts" colorScheme="blue" size="lg">
-            Go to the contact book
+            Let's start
           </Button>
         </>
       ) : (
