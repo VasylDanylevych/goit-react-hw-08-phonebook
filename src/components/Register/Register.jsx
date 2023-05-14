@@ -72,7 +72,7 @@ const RegisterForm = () => {
           <Text align="center">
             Already a user?
             <Link as={RouterLink} to="/login" color="green.500">
-              Sign Up
+              Log In
             </Link>
           </Text>
         </Stack>

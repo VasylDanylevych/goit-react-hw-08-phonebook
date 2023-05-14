@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react';
-import { Box, Flex, Link as ChakraLink } from '@chakra-ui/react';
+import { Box, Flex, Link as ChakraLink, Text } from '@chakra-ui/react';
 import { Outlet, Link } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { selectToken } from 'redux/auth/selectors';
@@ -10,7 +10,13 @@ export default function Layout() {
   const token = useSelector(selectToken);
 
   return (
-    <Flex flexDirection="column" minHeight="100vh">
+    <Flex
+      flexDirection="column"
+      minHeight="100vh"
+      maxWidth={1200}
+      margin="0 auto"
+      padding="0 16px"
+    >
       <Flex
         as="header"
         justify="space-between"
@@ -64,8 +70,14 @@ export default function Layout() {
         padding="1rem"
         backgroundColor="purple.500"
         color="white"
-        h={50}
-      ></Box>
+        h={62}
+        display="flex"
+        alignItems="center"
+        justifyContent="center"
+        fontSize="l"
+      >
+        <Text>THIS IS FOOOOTER</Text>
+      </Box>
     </Flex>
   );
 }

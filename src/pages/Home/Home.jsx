@@ -17,7 +17,7 @@ const HomePage = () => {
             Phone book
           </Heading>
           <Text fontSize="lg" my={4}>
-            Welcome {name}
+            Hello and welcome {name}!
           </Text>
 
           <Text fontSize="lg" my={4}>
